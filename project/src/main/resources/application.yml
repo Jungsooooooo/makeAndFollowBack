@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ENC(ef4AtBX32eCPdymYSFc7AfNv8D5iejIxehvshEvFr2mIBBPQBMjmbcydGNt/eOdwvFZnGlEuecY=)
+    platform: postgres
+    username: ENC(3+WCH+w9D6xNyST+wgGqAUSX4ebcKYBe)
+    password: ENC(VLnq1tGg5r1C66NrANA8mw==)
+
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
