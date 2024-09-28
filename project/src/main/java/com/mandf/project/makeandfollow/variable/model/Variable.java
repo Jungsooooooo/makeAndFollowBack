@@ -9,7 +9,6 @@ public class Variable {
 
     private String variableName;
     private String used_company;
-    private String makerUid;
     private String moduleName;
 
 }

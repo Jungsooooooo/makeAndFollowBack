@@ -5,6 +5,14 @@
 
 <mapper namespace="com.mandf.project.makeandfollow.variable.mapper.VariableMapper">
     <select id="findAll" resultType="com.mandf.project.makeandfollow.variable.model.Variable">
-        SELECT * FROM variables
+        SELECT *
+        FROM variables
     </select>
+
+    <select id="findByUser" resultType="com.mandf.project.makeandfollow.variable.model.Variable">
+        SELECT *
+        FROM variables vas
+        where vas.maker_uid = #{userUid}
+    </select>
+
 </mapper>

@@ -18,4 +18,8 @@ public class VariableService {
     public List<Variable> getAllVariables(){
         return variableMapper.findAll();
     }
+
+    public List<Variable> getVariablesByMaker(String userUid){
+        return variableMapper.findByUser(userUid);
+    }
 }

@@ -9,4 +9,6 @@ import java.util.List;
 public interface VariableMapper {
 
     List<Variable> findAll();
+
+    List<Variable> findByUser(String userUid);
 }
