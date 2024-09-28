@@ -1,4 +1,4 @@
-package com.mandf.project.makeandfollow.variable.config;
+package com.mandf.project.makeandfollow.common.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

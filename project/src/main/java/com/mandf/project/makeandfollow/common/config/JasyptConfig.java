@@ -1,4 +1,4 @@
-package com.mandf.project.makeandfollow.variable.config;
+package com.mandf.project.makeandfollow.common.config;
 import org.jasypt.encryption.StringEncryptor;
 import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
