@@ -12,6 +12,7 @@ public class VariableService {
     private final VariableMapper variableMapper;
 
     public VariableService(VariableMapper variableMapper){
+
         this.variableMapper = variableMapper;
     }
 
@@ -20,6 +21,12 @@ public class VariableService {
     }
 
     public List<Variable> getVariablesByMaker(String userUid){
+
         return variableMapper.findByUser(userUid);
+    }
+
+    public int insertVariable(Variable variable){
+
+        return variableMapper.insertVariable(variable);
     }
 }

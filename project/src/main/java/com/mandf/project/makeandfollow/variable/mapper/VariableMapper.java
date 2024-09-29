@@ -11,4 +11,6 @@ public interface VariableMapper {
     List<Variable> findAll();
 
     List<Variable> findByUser(String userUid);
+
+    int insertVariable(Variable variable);
 }

@@ -8,7 +8,7 @@ import lombok.Getter;
 public class Variable {
 
     private String variableName;
-    private String used_company;
+    private String usedCompany;
     private String moduleName;
 
 }
