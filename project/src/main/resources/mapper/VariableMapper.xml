@@ -15,13 +15,13 @@
         where vas.maker_uid = #{userUid}
     </select>
 
-    <insert id="insertVariables" parameterType="com.mandf.project.makeandfollow.variable.model.Variable">
+    <insert id="insertVariable" parameterType="com.mandf.project.makeandfollow.variable.model.Variable">
         INSERT INTO variables
         VALUES (
             #{variableName},
-            PI_DECRYPT(#{usedCompany}),
-            PI_DECRYPT#{user_uid},
-            #{module_name},
+            #{usedCompany},
+            #{userUid},
+            #{moduleName},
             now()
         )
     </insert>

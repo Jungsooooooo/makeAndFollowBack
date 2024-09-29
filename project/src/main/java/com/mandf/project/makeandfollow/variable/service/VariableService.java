@@ -1,5 +1,6 @@
 package com.mandf.project.makeandfollow.variable.service;
 
+import com.mandf.project.makeandfollow.variable.dto.VariableRequestDto;
 import com.mandf.project.makeandfollow.variable.mapper.VariableMapper;
 import com.mandf.project.makeandfollow.variable.model.Variable;
 import org.springframework.stereotype.Service;
@@ -25,8 +26,13 @@ public class VariableService {
         return variableMapper.findByUser(userUid);
     }
 
-    public int insertVariable(Variable variable){
-
-        return variableMapper.insertVariable(variable);
+    public int insertVariable(VariableRequestDto variableRequestDto) throws Exception {
+            int result = 0;
+        try {
+            result= variableMapper.insertVariable(variableRequestDto);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return result;
     }
 }

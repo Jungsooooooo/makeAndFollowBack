@@ -1,5 +1,6 @@
 package com.mandf.project.makeandfollow.variable.mapper;
 
+import com.mandf.project.makeandfollow.variable.dto.VariableRequestDto;
 import com.mandf.project.makeandfollow.variable.model.Variable;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,5 +13,5 @@ public interface VariableMapper {
 
     List<Variable> findByUser(String userUid);
 
-    int insertVariable(Variable variable);
+    int insertVariable(VariableRequestDto variableRequestDto);
 }

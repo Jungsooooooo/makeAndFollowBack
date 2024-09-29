@@ -1,13 +1,15 @@
-package com.mandf.project.makeandfollow.variable.model;
+package com.mandf.project.makeandfollow.variable.dto;
 
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @Builder
-public class Variable {
+public class VariableRequestDto {
 
     private String variableName;
     private String usedCompany;
+    private String userUid;
     private String moduleName;
+
 }
