@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mandf.project.makeandfollow.user.mapper.UserMapper">
+
+    <select id="findByUserId" resultType="com.mandf.project.makeandfollow.user.model.User">
+        SELECT *
+        FROM variables vas
+        where vas.maker_uid = #{userUid}
+    </select>
+
+    <insert id="insertVariable" parameterType="com.mandf.project.makeandfollow.vuser.model.User">
+        INSERT INTO User
+        VALUES (
+        #{userId},
+        #{password},
+        PI_ENCRYPT(#{userUid}),
+        #{moduleName},
+        now()
+        )
+    </insert>
+
+</mapper>
