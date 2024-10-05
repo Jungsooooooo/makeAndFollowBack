@@ -3,19 +3,16 @@ package com.mandf.project.makeandfollow.variable.service;
 import com.mandf.project.makeandfollow.variable.dto.VariableRequestDto;
 import com.mandf.project.makeandfollow.variable.mapper.VariableMapper;
 import com.mandf.project.makeandfollow.variable.model.Variable;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class VariableService {
 
     private final VariableMapper variableMapper;
-
-    public VariableService(VariableMapper variableMapper){
-
-        this.variableMapper = variableMapper;
-    }
 
     public List<Variable> getAllVariables(){
         return variableMapper.findAll();
