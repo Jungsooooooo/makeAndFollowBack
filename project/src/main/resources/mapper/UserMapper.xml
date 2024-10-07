@@ -5,19 +5,18 @@
 
 <mapper namespace="com.mandf.project.makeandfollow.user.mapper.UserMapper">
 
-    <select id="findByUserId" resultType="com.mandf.project.makeandfollow.user.model.User">
+    <select id="findUser" resultType="com.mandf.project.makeandfollow.user.model.User">
         SELECT *
-        FROM variables vas
-        where vas.maker_uid = #{userUid}
+        FROM user ur;
     </select>
 
-    <insert id="insertVariable" parameterType="com.mandf.project.makeandfollow.vuser.model.User">
-        INSERT INTO User
+    <insert id="insertUser" parameterType="com.mandf.project.makeandfollow.user.model.User">
+        INSERT INTO USER
         VALUES (
         #{userId},
         #{password},
-        PI_ENCRYPT(#{userUid}),
-        #{moduleName},
+        #{type},
+        #{status},
         now()
         )
     </insert>
