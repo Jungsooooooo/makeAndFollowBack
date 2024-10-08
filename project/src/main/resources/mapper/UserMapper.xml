@@ -17,6 +17,7 @@
         #{password},
         #{type},
         #{status},
+        gen_random_uuid(),
         now()
         )
     </insert>
