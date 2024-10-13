@@ -1,17 +1,12 @@
 package com.mandf.project.makeandfollow.common.exception;
 
+import com.mandf.project.makeandfollow.common.enumtype.Errorcode;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-public enum UserException {
+@AllArgsConstructor
+public class UserException extends RuntimeException {
 
-    INVALID_USER("401", "사용 불가한 사람입니다");
-
-    private String errCode;
-    private String message;
-
-    UserException(String errCode, String message){
-        this.errCode = errCode;
-        this.message = message;
-    }
+    Errorcode errorCode;
 }
