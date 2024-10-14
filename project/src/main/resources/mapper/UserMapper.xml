@@ -16,7 +16,7 @@
         #{userId},
         #{password},
         #{type},
-        #{status},
+        "Y",
         gen_random_uuid(),
         now()
         )

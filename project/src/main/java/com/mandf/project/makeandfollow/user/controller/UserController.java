@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/user")
 @RequiredArgsConstructor
@@ -18,7 +20,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/join")
-    public ResponseEntity<?> userJoin(@RequestBody UserJoinRequestDto userJoinRequestDto) throws Exception{
+    public ResponseEntity<?> userJoin(@RequestBody @Valid UserJoinRequestDto userJoinRequestDto) throws Exception{
 
         return new ResponseEntity<>(userService.insertUser(userJoinRequestDto), HttpStatus.OK);
     }
