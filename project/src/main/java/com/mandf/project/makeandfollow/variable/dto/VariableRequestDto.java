@@ -7,7 +7,7 @@ import lombok.Getter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-@Data
+@Getter
 @Builder
 public class VariableRequestDto {
 
@@ -16,7 +16,6 @@ public class VariableRequestDto {
 
     @NotBlank(message = "소속회사 적어주세요.")
     private String usedCompany;
-    private String userUid;
 
     @NotBlank(message = "해당 모듈을 적어주세요.")
     private String moduleName;
