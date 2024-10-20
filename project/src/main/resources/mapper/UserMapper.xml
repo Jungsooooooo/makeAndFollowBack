@@ -7,18 +7,18 @@
 
     <select id="findUser" resultType="com.mandf.project.makeandfollow.user.model.User">
         SELECT *
-        FROM user ur;
+        FROM user_info;
     </select>
 
     <insert id="insertUser" parameterType="com.mandf.project.makeandfollow.user.model.User">
-        INSERT INTO USER
+        INSERT INTO user_info
         VALUES (
         #{userId},
         #{password},
+        #{status},
         #{type},
-        "Y",
-        gen_random_uuid(),
-        now()
+        now(),
+        gen_random_uuid()
         )
     </insert>
 

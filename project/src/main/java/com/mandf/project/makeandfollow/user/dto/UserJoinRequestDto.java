@@ -18,4 +18,5 @@ public class UserJoinRequestDto {
     @NotBlank(message = "비밀번호를 입력해주세요")
     private String password;
     private String status;
+    private String type;
 }
