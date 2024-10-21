@@ -10,11 +10,18 @@
         FROM user_info;
     </select>
 
+    <select id="loginUser" resultType="com.mandf.project.makeandfollow.user.model.User">
+        SELECT *
+        FROM user_info ui
+        WHERE ui.userId = #{userId}
+        AND   ui.passowrd = #{password};
+    </select>
+
     <insert id="insertUser" parameterType="com.mandf.project.makeandfollow.user.model.User">
         INSERT INTO user_info
         VALUES (
         #{userId},
-        #{password},
+        pi_encrypt(#{password}),
         #{status},
         #{type},
         now(),
