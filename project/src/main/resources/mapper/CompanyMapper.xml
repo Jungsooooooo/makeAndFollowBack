@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mandf.project.makeandfollow.company.mapper.CompanyMapper">
+    <select id="findCompanyByComCode" resultMap="com.mandf.project.makeandfollow.company.dto.CompanyFindResponseDto">
+        SELECT *
+        FROM company_info ci
+        WHERE ci.company_code = #{com_code}
+    </select>
+
+    <insert id="insertCompany" parameterType="com.mandf.project.makeandfollow.company.dto.CompanyInsertResponseDto">
+        INSERT INTO company_info
+        VALUES (
+        #{companyName},
+        #{gen_random_uuid()},
+        "1",
+        "01",
+        now(),
+        )
+    </insert>
+
+</mapper>    

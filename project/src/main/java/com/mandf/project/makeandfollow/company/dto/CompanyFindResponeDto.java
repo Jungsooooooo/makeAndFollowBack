@@ -1,14 +1,13 @@
-package com.mandf.project.makeandfollow.company.model;
+package com.mandf.project.makeandfollow.company.dto;
 
 import lombok.Builder;
 import lombok.Getter;
 
 @Getter
 @Builder
-public class Company {
+public class CompanyFindResponeDto {
 
     private String companyName;
     private String companyUid;
     private String companyCode;
-    private String status;
 }
