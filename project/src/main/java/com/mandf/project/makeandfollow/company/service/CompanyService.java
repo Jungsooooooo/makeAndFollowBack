@@ -1,5 +1,8 @@
 package com.mandf.project.makeandfollow.company.service;
 
+import com.mandf.project.makeandfollow.company.dto.CompanyFindByCodeRequestDto;
+import com.mandf.project.makeandfollow.company.dto.CompanyFindByUUIDRequestDto;
+import com.mandf.project.makeandfollow.company.dto.CompanyFindResponeDto;
 import com.mandf.project.makeandfollow.company.dto.CompanyInsertRequestDto;
 import com.mandf.project.makeandfollow.company.mapper.CompanyMapper;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +13,16 @@ import org.springframework.stereotype.Service;
 public class CompanyService {
 
     private final CompanyMapper companyMapper;
+
+    public CompanyFindResponeDto findCompanyByCode(CompanyFindByCodeRequestDto companyFindByCodeRequestDto){
+
+        return companyMapper.findCompanyByCode(companyFindByCodeRequestDto);
+    }
+
+    public CompanyFindResponeDto findCompanyByUUID(CompanyFindByUUIDRequestDto companyFindByUUIDRequestDto){
+
+        return companyMapper.findCompanyByUUID(companyFindByUUIDRequestDto);
+    }
 
     public int insertCompany(CompanyInsertRequestDto companyInsertRequestDto) throws Exception {
         int result = 0;
