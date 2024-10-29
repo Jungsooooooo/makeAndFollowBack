@@ -20,9 +20,21 @@
         VALUES (
             #{variableName},
             #{usedCompany},
-            PI_ENCRYPT(#{userUid}),
+            #{userUid},
             #{moduleName},
             now()
+        )
+    </insert>
+
+    <insert id="insertVariableWithCompanyUserUid" parameterType="com.mandf.project.makeandfollow.variable.model.Variable">
+        INSERT INTO variables
+        VALUES (
+        #{variableName},
+        #{usedCompany},
+        #{userUid},
+        #{moduleName},
+        now(),
+        #{companyUid}
         )
     </insert>
 

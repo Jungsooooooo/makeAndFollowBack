@@ -12,4 +12,5 @@ public class User {
     private String status;
     private String type;
     private String companyUid;
+    private String userUid;
 }

@@ -10,4 +10,6 @@ public class Variable {
     private String variableName;
     private String usedCompany;
     private String moduleName;
+    private String userUid;
+    private String companyUid;
 }

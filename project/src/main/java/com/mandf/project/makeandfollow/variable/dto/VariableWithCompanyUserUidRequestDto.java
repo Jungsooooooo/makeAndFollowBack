@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 
 @Getter
 @Builder
-public class VariableRequestDto {
+public class VariableWithCompanyUserUidRequestDto {
 
     @NotBlank(message = "이름을 입력해주세요.")
     private String variableName;
@@ -17,4 +17,10 @@ public class VariableRequestDto {
 
     @NotBlank(message = "해당 모듈을 입력해주세요.")
     private String moduleName;
+
+    @NotBlank(message = "유저 정보를 입력해주세요")
+    private String userUid;
+
+    @NotBlank(message = "회사명을 입력해주세요.")
+    private String companyUid;
 }
