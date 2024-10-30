@@ -21,4 +21,10 @@
         )
     </insert>
 
+    <update id="updateCompany">
+        UPDATE company
+        SET status = #{status}
+        WHERE companyUid =#{companyUid}
+    </update>
+
 </mapper>    

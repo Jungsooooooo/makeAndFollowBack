@@ -1,9 +1,6 @@
 package com.mandf.project.makeandfollow.company.service;
 
-import com.mandf.project.makeandfollow.company.dto.CompanyFindByCodeRequestDto;
-import com.mandf.project.makeandfollow.company.dto.CompanyFindByUUIDRequestDto;
-import com.mandf.project.makeandfollow.company.dto.CompanyFindResponeDto;
-import com.mandf.project.makeandfollow.company.dto.CompanyInsertRequestDto;
+import com.mandf.project.makeandfollow.company.dto.*;
 import com.mandf.project.makeandfollow.company.mapper.CompanyMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -30,6 +27,10 @@ public class CompanyService {
         result =companyMapper.insertCompany(companyInsertRequestDto);
 
         return result;
+    }
 
+    public CompanyUpdateResponseDto updateCompany(CompanyUpdateRequestDto companyUpdateRequestDto){
+
+        return companyMapper.updateCompany(companyUpdateRequestDto);
     }
 }
