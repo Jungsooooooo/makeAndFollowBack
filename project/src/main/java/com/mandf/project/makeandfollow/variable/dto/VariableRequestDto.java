@@ -2,11 +2,13 @@ package com.mandf.project.makeandfollow.variable.dto;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
 
 @Getter
 @Builder
+@ToString
 public class VariableRequestDto {
 
     @NotBlank(message = "이름을 입력해주세요.")
