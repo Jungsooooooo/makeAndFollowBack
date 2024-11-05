@@ -1,15 +1,15 @@
 package com.mandf.project.makeandfollow.user.dto;
 
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
+import lombok.ToString;
 
 import javax.validation.constraints.NotBlank;
 
 
-
 @Getter
 @Builder
+@ToString
 public class UserJoinRequestDto {
 
     @NotBlank(message = "아이디를 입력해주세요")
